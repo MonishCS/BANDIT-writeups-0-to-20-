@@ -269,10 +269,75 @@
 
    -> OBJECTIVE:
 
-      Recover the password from data.txt, which is a hexdump of a repeatedly compressed file. 
-      The goal is to reverse the hexdump and decompress the data step by step.
+      Recover the password from data.txt, which is a hexdump of a 
+      repeatedly compressed file. 
+      The goal is to reverse the hexdump and decompress the data step by 
+      step.
    
    -> USED COMMANDS:
+
+      # ssh bandit12@bandit.labs.overthewire.org -p
+
+      #
+   
    -> FLAG / PASSWORD FOR BANDIT 13 :
 
+      FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+*LEVEL 13 TO 14:
+
+   -> OBJECTIVE:
+
+      You need to access the password stored in /etc/bandit_pass/bandit14, 
+      which is only readable by user bandit14. However, instead of 
+      receiving the password directly, you are provided with a private SSH 
+      key to log into the next level. Useful commands include ssh, telnet, 
+      nc, openssl, s_client, and nmap, and understanding SSH keys will be 
+      helpful.
    
+   -> USED COMMANDS:
+
+      # ssh bandit13@bandit.labs.overthewire.org -p 2220
+
+      # ls
+      # ssh -i sshkey.private bandit14@localhost -p 2220
+   
+   -> FLAG / PASSWORD FOR BANDIT 14 :
+
+      MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+*LEVEL 14 TO 15:
+
+   -> OBJECTIVE:
+   -> USED COMMANDS:
+   -> FLAG / PASSWORD FOR BANDIT 15 :
+
+*LEVEL 15 TO 16:
+
+   -> OBJECTIVE:
+   -> USED COMMANDS:
+   -> FLAG / PASSWORD FOR BANDIT 16 :
+
+*LEVEL 16 TO 17:
+
+   -> OBJECTIVE:
+   -> USED COMMANDS:
+   -> FLAG / PASSWORD FOR BANDIT 17 :
+
+*LEVEL 17 TO 18:
+
+   -> OBJECTIVE:
+   -> USED COMMANDS:
+   -> FLAG / PASSWORD FOR BANDIT 18 :
+
+*LEVEL 18 TO 19:
+
+   -> OBJECTIVE:
+   -> USED COMMANDS:
+   -> FLAG / PASSWORD FOR BANDIT 19 :
+
+*LEVEL 19 TO 20:
+
+   -> OBJECTIVE:
+   -> USED COMMANDS:
+   -> FLAG / PASSWORD FOR BANDIT 19 :
