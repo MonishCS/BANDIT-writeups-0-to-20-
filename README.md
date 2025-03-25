@@ -141,9 +141,138 @@
       correct file.
    
    -> USED COMMANDS:
+
+      # ssh bandit5@bandit/labs.overthewire.org -p 2220
+
+      # ls
+      # cd inhere/
+      # ls
+      # find / -type f -size 1033c ! -executable 
+      # cat maybehere07/.file2
+   
    -> FLAG / PASSWORD FOR BANDIT 6 :
 
+      HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
-      
+*LEVEL 6 TO 7:
 
+   -> OBJECTIVE:
       
+      Find the password for the next level by locating a file on the server that meets the following criteria.
+   
+   -> USED COMMANDS:
+
+      # ssh bandit6@bandit.labs.overthewire.org -p 2220
+
+      # ls -ahl
+      # find / -group bandit6 -user bandit7 -size33c
+      # cat /var/lib/dpkg/info/bandit7.password
+   
+   -> FLAG / PASSWORD FOR BANDIT 7 :
+
+      morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+*LEVEL 7 TO 8:
+   
+   -> OBJECTIVE:
+
+      Extract the password for the next level from the file data.txt, specifically from the 
+      line containing the word "millionth".
+   
+   -> USED COMMANDS:
+
+      # ssh bandit7@bandit.labs.overthewire.org -p 2220
+
+      # ls
+      # cat data.txt | grep "millionth"
+   
+   -> FLAG / PASSWORD FOR BANDIT 8 :
+
+      dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+*LEVEL 8 TO 9:
+
+   -> OBJECTIVE:
+
+      Find the unique password stored in data.txt, which appears only once in the file.
+   
+   -> USED COMMANDS:
+
+      # ssh bandit8@bandit.labs.overthewire.org -p 2220
+
+      # ls
+      # cat data.txt | sort | uniq -u
+   
+   -> FLAG / PASSWORD FOR BANDIT 9 :
+
+      4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+*LEVEL 9 TO 10:
+
+   -> OBJECTIVE:
+
+      Extract the password from data.txt, which is one of the few human-readable strings and 
+      is preceded by several = characters.
+   
+   -> USED COMMANDS:
+
+      # ssh bandit9@bandit.labs.overthewire.org -p 2220
+
+      # ls
+      # strings data.txt | grep "=="
+
+   
+   -> FLAG / PASSWORD FOR BANDIT 10 :
+
+      FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+      
+*LEVEL 10 TO 11:
+
+   -> OBJECTIVE:
+
+      Decode the Base64-encoded password stored in data.txt and retrieve the password for the 
+      next level.
+   
+   -> USED COMMANDS:
+
+      # ssh bandit10@bandit.labs.overthewire.org -p 2220
+
+      # ls
+      # cat data.txt
+      # cat data.txt | base64 -d
+      # cat data.txt | base64 -d | awk '{print $4}'
+   
+   -> FLAG / PASSWORD FOR BANDIT 11 :
+
+      dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+*LEVEL 11 TO 12:
+
+   -> OBJECTIVE:
+
+      Decode the ROT13-encoded password stored in data.txt and retrieve the password for the 
+      next level.
+   
+   -> USED COMMANDS:
+
+      # ssh bandit11@bandit.labs.overthewire.org -p 2220
+
+      # ls
+      # cat data.txt
+      // by using cybershef do ROT13
+      
+   
+   -> FLAG / PASSWORD FOR BANDIT 12 :
+
+      7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+*LEVEL 12 TO 13:
+
+   -> OBJECTIVE:
+
+      Recover the password from data.txt, which is a hexdump of a repeatedly compressed file. 
+      The goal is to reverse the hexdump and decompress the data step by step.
+   
+   -> USED COMMANDS:
+   -> FLAG / PASSWORD FOR BANDIT 13 :
+
+   
